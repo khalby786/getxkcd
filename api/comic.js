@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 
 module.exports = async (request, response) => {
+  
   const { comic } = request.query;
   
   if (comic == "" || comic == " ") {
