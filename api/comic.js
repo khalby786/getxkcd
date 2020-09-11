@@ -6,10 +6,10 @@ module.exports = async (req, res) => {
   if (comic == "" || comic == " ") {
     let req = await fetch("http://xkcd.com/info.0.json");
     let res = await req.json();
-    res.status(200).json(res);
+    res.sendStatus(200).json(res);
   } else {
     let req = await fetch(`http://xkcd.com/${comic}/info.0.json`);
     let res = await req.json();
-    res.status(200).json(res);
+    res.sendStatus(200).json(res);
   }
 }
