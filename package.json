@@ -1,0 +1,20 @@
+{
+  "name": "xkcd-api",
+  "version": "0.0.1",
+  "description": "XKCD API built using serverless functions.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://github.com/khalby786/xkcd-api"
+  },
+  "license": "MIT"
+}
