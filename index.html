@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>get some xkcd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+      @import url("https://rsms.me/inter/inter.css");
+
+      body {
+        font-family: "Inter", sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      pre, code {
+        font-family: "Hack", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>getxkcd</h1>
+
+    <h3>
+      xkcd api with cors enabled (which the actual xkcd api has disabled)
+    </h3>
+
+    <p>
+      get the latest comic: <br /><a
+        href="https://getxkcd.now.sh/latest"
+        >https://getxkcd.now.sh/latest</a
+      ><br /><a
+        href="https://getxkcd.now.sh/0"
+        >https://getxkcd.now.sh/0</a
+      ><br /><a
+        href="https://getxkcd.now.sh/"
+        >https://getxkcd.now.sh/</a
+      > <span style="font-size:12px;">(request header has <code>accept</code> as <code>application/json</code>)</span>
+    </p>
+
+    <p>
+      get a particular comic with the comic number: <br /><a
+        href="https://getxkcd.now.sh/1481"
+        >https://getxkcd.now.sh/1481</a
+      >
+    </p>
+
+    <p style="margin-top:40px;">
+      <i
+        >Built with <strike>love</strike> xkcd by
+        <a href="https://github.com/khalby786/getxkcd">Khaleel Gibran</a>.</i
+      >
+    </p>
+  </body>
+</html>

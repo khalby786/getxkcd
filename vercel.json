@@ -1,0 +1,66 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Credentials", "value": "true" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/latest",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "source": "/latest",
+      "destination": "/api/latest"
+    },
+    {
+      "source": "/0",
+      "destination": "/api/latest"
+    },
+    {
+      "source": "/:number(\\d{1,})",
+      "destination": "/api/number"
+    },
+    {
+      "source": "/api/comic",
+      "has": [
+        {
+          "type": "query",
+          "key": "num",
+          "value": "latest"
+        }
+      ],
+      "destination": "/api/latest"
+    },
+    {
+      "source": "/api/comic",
+      "has": [
+        {
+          "type": "query",
+          "key": "num",
+          "value": "(\\d{1,})"
+        }
+      ],
+      "destination": "/api/number"
+    }
+  ]
+}
