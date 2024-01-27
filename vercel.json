@@ -23,7 +23,7 @@
       "has": [
         {
           "type": "header",
-          "key": "accept",
+          "key": "Accept",
           "value": "application/json"
         }
       ]

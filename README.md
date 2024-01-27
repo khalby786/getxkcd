@@ -50,7 +50,7 @@ https://getxkcd.now.sh/1481
 
 ## notes
 
-- you can also get the latest comic by sending a request to https://getxkcd.now.sh/, but the request header should have `accept` as `application/json`
+- you can also get the latest comic by sending a request to https://getxkcd.now.sh/, but the request header should have `Accept` as `application/json`
 
 
   ```bash
@@ -58,7 +58,7 @@ https://getxkcd.now.sh/1481
   ```
 
 - the API is [backwards compatible](https://xkcd.com/1172/) with the previous versions which used https://getxkcd.now.sh/api/comic?num=latest to get the latest comic and https://getxkcd.now.sh/api/comic?num=1172 to get a particular comic
-- if one day vercel decides to stop supporting `.now.sh` domains (and the network errors that follow), switch to `.vercel.app`
+- if you get an HTML response from the API, you have to set your API client to handle redirects. alternatively, replace `.now.sh` domains with `.vercel.app` to avoid this pitfall in places like `curl`
 - `vercel.json` handles all the routing, so make sure you copy it verbatim if you want good things to happen
 - in an effort to learn and use a new programming language, i have used go which is unnecessarily complicating things but *✨ performance ✨* 
 
