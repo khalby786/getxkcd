@@ -30,7 +30,7 @@
     },
     {
       "source": "/",
-      "destination": "/app",
+      "destination": "/app.html",
       "missing": [
         {
           "type": "header",
