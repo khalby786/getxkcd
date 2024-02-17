@@ -29,6 +29,17 @@
       ]
     },
     {
+      "source": "/",
+      "destination": "/app",
+      "missing": [
+        {
+          "type": "header",
+          "key": "Accept",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
       "source": "/latest",
       "destination": "/api/latest"
     },
